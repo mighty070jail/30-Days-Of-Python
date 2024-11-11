@@ -1,5 +1,5 @@
-##Task-1
-##Print Function #1
+#Task-1
+#Print Function #1
 ## **Task**: Use the print function to write code.
 ##Date:
 **Description**:
