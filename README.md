@@ -1,6 +1,6 @@
 # 30 Days of Python Coding Challenge
 
-Welcome to the **30 Days of Coding Challenge**! This repository is designed to help beginners develop a solid foundation in Python programming through daily tasks. By the end of this challenge, you and your team will have the skills to write basic Python code confidently.
+Welcome to the **30 Days of Coding Challenge**! This repository is designed to help beginners develop a solid foundation in Python programming through daily tasks. By the end of this challenge, you will have the skills to write basic Python code confidently.
 
 
 ## Challenge Overview
