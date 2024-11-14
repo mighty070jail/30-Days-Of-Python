@@ -1,7 +1,7 @@
 '''
 Author: Irene Jimmy
-Date: 14 / 11 / 2024
-Description: Python program to use print() function
+Date:13-11-24
+Description:Python program to print a string function
 '''
 string_1="Hello, "
 string_2="World!"
