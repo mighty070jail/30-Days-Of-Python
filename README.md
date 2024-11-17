@@ -40,25 +40,25 @@ The repository is organized as follows:
 ```
 30-days-of-coding-challenge/
 │
-├── Week-1-Python-Fundamentals
+├── Week-1
 │   ├── Day-1
 │   ├── Day-2
 │   ├── ...
 │   └── Day-7
 │
-├── Week-2-Control-Structures-and-Functions
+├── Week-2
 │   ├── Day-8
 │   ├── Day-9
 │   ├── ...
 │   └── Day-14
 │
-├── Week-3-Data-Structures
+├── Week-3
 │   ├── Day-15
 │   ├── Day-16
 │   ├── ...
 │   └── Day-21
 │
-└── Week-4-Basic-OOP
+└── Week-4
     ├── Day-22
     ├── Day-23
     ├── ...
