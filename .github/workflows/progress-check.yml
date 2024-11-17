@@ -12,7 +12,7 @@ jobs:
     steps:
       # Step 1: Checkout the repository
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4  # Ensures the code is checked out for the job
 
       # Step 2: Set up Python
       - name: Set up Python
@@ -26,49 +26,48 @@ jobs:
 
       # Step 4: Run the Python script to check progress
       - name: Run Progress Check
-  env:
-    PAT: ${{ secrets.PAT }}  # Use the Personal Access Token securely
-  run: |
-    python - <<EOF
-    from github import Github
-    from datetime import datetime
+        env:
+          PAT: ${{ secrets.PAT }}  # Personal Access Token stored in GitHub secrets
+        run: |
+          python - <<EOF
+          from github import Github
+          from datetime import datetime
 
-    # Use the environment variable securely
-    token = "${{ secrets.PAT }}"
-    repo_name = "mighty070jail/30-Days-Of-Python"
-    team_members = ["Leslythomasmathew", "irenejimmy", "levinabr", "Lulup-pradeepan", "mighty070jail"]
+          # Use the environment variable securely
+          token = "${{ secrets.PAT }}"
+          repo_name = "mighty070jail/30-Days-Of-Python"
+          team_members = ["Leslythomasmathew", "irenejimmy", "levinabr", "Lulup-pradeepan", "mighty070jail"]
 
-    # Determine the current day and week
-    today = datetime.now()
-    day_number = today.timetuple().tm_yday % 30  # Adjust to align with Day-1
-    week_number = (day_number - 1) // 7 + 1
-    day_name = f"Day-{day_number}"
-    week_name = f"Week-{week_number}"
+          # Determine the current day and week
+          today = datetime.now()
+          day_number = today.timetuple().tm_yday % 30  # Adjust to align with Day-1
+          week_number = (day_number - 1) // 7 + 1
+          day_name = f"Day-{day_number}"
+          week_name = f"Week-{week_number}"
 
-    g = Github(token)
-    repo = g.get_repo(repo_name)
-    missing_files = []
-    completed_members = []
+          g = Github(token)
+          repo = g.get_repo(repo_name)
+          missing_files = []
+          completed_members = []
 
-    for member in team_members:
-        file_path = f"{week_name}/{day_name}/{member}.py"
-        try:
-            repo.get_contents(file_path)
-            completed_members.append(member)
-        except:
-            missing_files.append(member)
+          for member in team_members:
+              file_path = f"{week_name}/{day_name}/{member}.py"
+              try:
+                  repo.get_contents(file_path)
+                  completed_members.append(member)
+              except:
+                  missing_files.append(member)
 
-    issue_title = f"Progress Update: {day_name}"
-    issues = repo.get_issues(state="open")
-    issue = next((i for i in issues if i.title == issue_title), None)
+          issue_title = f"Progress Update: {day_name}"
+          issues = repo.get_issues(state="open")
+          issue = next((i for i in issues if i.title == issue_title), None)
 
-    body = f"**Day:** {day_name}\\n**Week:** {week_name}\\n\\n" \
-           f"**Completed:**\\n- " + "\\n- ".join(completed_members) + "\\n\\n" \
-           f"**Pending:**\\n- " + "\\n- ".join(missing_files)
+          body = f"**Day:** {day_name}\\n**Week:** {week_name}\\n\\n" \
+                 f"**Completed:**\\n- " + "\\n- ".join(completed_members) + "\\n\\n" \
+                 f"**Pending:**\\n- " + "\\n- ".join(missing_files)
 
-    if issue:
-        issue.edit(body=body)
-    else:
-        repo.create_issue(title=issue_title, body=body)
-    EOF
-
+          if issue:
+              issue.edit(body=body)
+          else:
+              repo.create_issue(title=issue_title, body=body)
+          EOF
