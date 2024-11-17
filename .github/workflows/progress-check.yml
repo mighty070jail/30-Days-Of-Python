@@ -1,0 +1,71 @@
+name: Check Progress and Update Issues
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Runs daily at 9:00 AM UTC
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  check-progress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: pip install PyGithub
+
+      - name: Run Progress Check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAT: ${{ secrets.PAT }}
+          REPO_NAME: ${{ github.repository }}
+        run: |
+          python - <<EOF
+          from github import Github
+          from datetime import datetime
+
+          # Environment variables
+          token = "${{ secrets.PAT }}"
+          repo_name = "${{ github.repository }}"
+          team_members = ["Leslythomasmathew", "irenejimmy", "levinabr", "Lulup-pradeepan", "mighty070jail"]
+          
+          # Determine the current day and week
+          today = datetime.now()
+          day_number = today.timetuple().tm_yday % 30  # Adjust to align with Day-1
+          week_number = (day_number - 1) // 7 + 1
+          day_name = f"Day-{day_number}"
+          week_name = f"Week-{week_number}"
+
+          g = Github(token)
+          repo = g.get_repo(repo_name)
+          missing_files = []
+          completed_members = []
+
+          for member in team_members:
+              file_path = f"{week_name}/{day_name}/{member}.py"
+              try:
+                  repo.get_contents(file_path)
+                  completed_members.append(member)
+              except:
+                  missing_files.append(member)
+          
+          issue_title = f"Progress Update: {day_name}"
+          issues = repo.get_issues(state="open")
+          issue = next((i for i in issues if i.title == issue_title), None)
+
+          body = f"**Day:** {day_name}\\n**Week:** {week_name}\\n\\n" \
+                 f"**Completed:**\\n- " + "\\n- ".join(completed_members) + "\\n\\n" \
+                 f"**Pending:**\\n- " + "\\n- ".join(missing_files)
+
+          if issue:
+              issue.edit(body=body)
+          else:
+              repo.create_issue(title=issue_title, body=body)
+          EOF
