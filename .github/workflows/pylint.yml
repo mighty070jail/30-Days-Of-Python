@@ -30,71 +30,71 @@ jobs:
           PAT: ${{ secrets.PAT }}  # Personal Access Token stored in GitHub secrets
         run: |
           python -c """
-from github import Github
-from datetime import datetime, timedelta
-import os
-
-# Load environment variables
-token = os.getenv('PAT')
-if not token:
-    raise ValueError("Personal Access Token (PAT) is not set.")
-
-repo_name = "mighty070jail/30-Days-Of-Python"
-team_members = ["Leslythomasmathew", "irenejimmy", "levinabr", "Lulup-pradeepan", "mighty070jail"]
-
-# Define the challenge start date (adjust this as needed)
-challenge_start_date = datetime(2024, 11, 15)  # Example: Start on Nov 15, 2024
-
-# Determine the current day and week
-today = datetime.now()
-elapsed_days = (today - challenge_start_date).days + 1  # Include the start date
-if elapsed_days < 1 or elapsed_days > 30:
-    raise ValueError("Current date is out of the 30-day challenge range.")
-
-day_number = elapsed_days
-week_number = (day_number - 1) // 7 + 1
-day_name = f"Day-{day_number}"
-week_name = f"Week-{week_number}"
-
-# Debugging: Print current day and week
-print(f"Checking progress for: {week_name}/{day_name}")
-
-# Authenticate with GitHub
-g = Github(token)
-repo = g.get_repo(repo_name)
-missing_files = []
-completed_members = []
-
-# Check for team members' files
-for member in team_members:
-    file_path = f"{week_name}/{day_name}/{member}.py"
-    try:
-        # Debugging: Print the file being checked
-        print(f"Checking file: {file_path}")
-        repo.get_contents(file_path)
-        completed_members.append(member)
-    except Exception as e:
-        # Debugging: Log missing files
-        print(f"File not found: {file_path}, Error: {e}")
-        missing_files.append(member)
-
-# Debugging: Print results
-print(f"Completed Members: {completed_members}")
-print(f"Missing Files: {missing_files}")
-
-# Prepare issue content
-issue_title = f"Progress Update: {day_name}"
-body = f"**Day:** {day_name}\\n**Week:** {week_name}\\n\\n" \
-       f"**Completed:**\\n- " + "\\n- ".join(completed_members) + "\\n\\n" \
-       f"**Pending:**\\n- " + "\\n- ".join(missing_files)
-
-# Update or create the issue
-issues = repo.get_issues(state="open")
-issue = next((i for i in issues if i.title == issue_title), None)
-if issue:
-    print(f"Updating issue: {issue_title}")
-    issue.edit(body=body)
-else:
-    print(f"Creating new issue: {issue_title}")
-    repo.create_issue(title=issue_title, body=body)
-"""
+          from github import Github
+          from datetime import datetime, timedelta
+          import os
+          
+          # Load environment variables
+          token = os.getenv('PAT')
+          if not token:
+              raise ValueError("Personal Access Token (PAT) is not set.")
+          
+          repo_name = "mighty070jail/30-Days-Of-Python"
+          team_members = ["Leslythomasmathew", "irenejimmy", "levinabr", "Lulup-pradeepan", "mighty070jail"]
+          
+          # Define the challenge start date (adjust this as needed)
+          challenge_start_date = datetime(2024, 11, 15)  # Example: Start on Nov 15, 2024
+          
+          # Determine the current day and week
+          today = datetime.now()
+          elapsed_days = (today - challenge_start_date).days + 1  # Include the start date
+          if elapsed_days < 1 or elapsed_days > 30:
+              raise ValueError("Current date is out of the 30-day challenge range.")
+          
+          day_number = elapsed_days
+          week_number = (day_number - 1) // 7 + 1
+          day_name = f"Day-{day_number}"
+          week_name = f"Week-{week_number}"
+          
+          # Debugging: Print current day and week
+          print(f"Checking progress for: {week_name}/{day_name}")
+          
+          # Authenticate with GitHub
+          g = Github(token)
+          repo = g.get_repo(repo_name)
+          missing_files = []
+          completed_members = []
+          
+          # Check for team members' files
+          for member in team_members:
+              file_path = f"{week_name}/{day_name}/{member}.py"
+              try:
+                  # Debugging: Print the file being checked
+                  print(f"Checking file: {file_path}")
+                  repo.get_contents(file_path)
+                  completed_members.append(member)
+              except Exception as e:
+                  # Debugging: Log missing files
+                  print(f"File not found: {file_path}, Error: {e}")
+                  missing_files.append(member)
+          
+          # Debugging: Print results
+          print(f"Completed Members: {completed_members}")
+          print(f"Missing Files: {missing_files}")
+          
+          # Prepare issue content
+          issue_title = f"Progress Update: {day_name}"
+          body = f"**Day:** {day_name}\\n**Week:** {week_name}\\n\\n" \
+                 f"**Completed:**\\n- " + "\\n- ".join(completed_members) + "\\n\\n" \
+                 f"**Pending:**\\n- " + "\\n- ".join(missing_files)
+          
+          # Update or create the issue
+          issues = repo.get_issues(state="open")
+          issue = next((i for i in issues if i.title == issue_title), None)
+          if issue:
+              print(f"Updating issue: {issue_title}")
+              issue.edit(body=body)
+          else:
+              print(f"Creating new issue: {issue_title}")
+              repo.create_issue(title=issue_title, body=body)
+          """
