@@ -1,3 +1,11 @@
+### **Day 4: Getting User Input**
+- **Task**: 
+  - Write a program that asks the user for their favorite animal.
+  - Display a sentence using that input, e.g., `"Your favorite animal is [animal]."`
+- **Goal**: Learn to gather input using the `input()` function.
+
+
+
 Exercise 1: Basic Variable Creation and Printing
 
 1. Create a variable x and assign it the value of 10.
@@ -26,22 +34,10 @@ Exercise 2: Variable Manipulation
 
 
 
----
-
-Exercise 3: Arithmetic with Variables
-
-1. Create two variables: a with the value of 15 and b with the value of 4.
-
-
-2. Calculate the sum, difference, product, and division of a and b.
-
-
-3. Print the results with appropriate labels (e.g., "Sum:", "Difference:").
 
 
 
 
----
 
 Exercise 4: Swapping Variables
 
@@ -100,24 +96,4 @@ Exercise 7: Exploring Errors
 
 
 
-
----
-
-Challenge: Simple Interest Calculation
-
-1. Create variables for principal (e.g., 1000), rate (e.g., 5), and time (e.g., 2 years).
-
-
-2. Calculate the simple interest using the formula:
-Simple Interest = (Principal × Rate × Time) / 100
-
-
-3. Print the result.
-
-
-
-
----
-
-Let me know if you'd like solutions or explanations for any of these exercises!
 
