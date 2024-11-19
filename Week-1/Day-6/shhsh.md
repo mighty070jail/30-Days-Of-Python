@@ -35,7 +35,7 @@ In the output above, <class 'int'> refers to the integer data type.
 
 ---
 
-Floats
+## Floats
 
 Floats are numbers with fractional parts. They can have many numbers after the decimal.
 
@@ -48,7 +48,7 @@ Output:
 3.141592653589793
 <class 'float'>
 
-Specifying Floats with Fractions
+## Specifying Floats with Fractions
 
 almost_pi = 22 / 7
 print(almost_pi)
@@ -59,7 +59,7 @@ Output:
 3.142857142857143
 <class 'float'>
 
-Using the round() Function
+## Using the round() Function
 
 The round() function rounds a number to a specified number of decimal places.
 
@@ -72,7 +72,7 @@ Output:
 3.14286
 <class 'float'>
 
-Floats Without Fractional Parts
+## Floats Without Fractional Parts
 
 Whenever you write a number with a decimal point, Python recognizes it as a float, even if it has no fractional part.
 
@@ -88,7 +88,7 @@ Output:
 
 ---
 
-Booleans
+## Booleans
 
 Booleans represent one of two values: True or False.
 
@@ -135,7 +135,7 @@ True
 
 ---
 
-Strings
+## Strings
 
 Strings are a collection of characters (letters, punctuation, numbers, or symbols) enclosed in quotation marks. They are commonly used to represent text.
 
@@ -148,7 +148,7 @@ Output:
 Hello, Python!
 <class 'str'>
 
-Length of a String
+## Length of a String
 
 You can find the length of a string using the len() function.
 
@@ -158,7 +158,7 @@ Output:
 
 14
 
-Empty Strings
+## Empty Strings
 
 An empty string has a length of zero.
 
@@ -171,7 +171,7 @@ Output:
 <class 'str'>
 0
 
-Strings with Numbers
+## Strings with Numbers
 
 If a number is enclosed in quotation marks, it is treated as a string.
 
@@ -198,7 +198,7 @@ Output:
 
 ---
 
-String Operations
+## String Operations
 
 You can add two strings to concatenate them:
 
@@ -227,8 +227,14 @@ However, you cannot multiply a string by a float:
 will_not_work = "abc" * 3.0
 
 Error Output:
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+/tmp/ipykernel_19/2386798361.py in <module>
+----> 1 will_not_work = "abc" * 3.
 
 TypeError: can't multiply sequence by non-int of type 'float'
+
+
 
 In the error message:
 
