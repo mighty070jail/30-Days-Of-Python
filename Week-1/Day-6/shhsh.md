@@ -1,5 +1,3 @@
-Here is the entire content in markdown format:
-
 # Introduction
 
 Whenever you create a variable in Python, it has a value with a corresponding **data type**. There are many different data types, such as integers, floats, booleans, and strings, all of which we'll cover in this lesson. (This is just a small subset of the available data types -- there are also dictionaries, sets, lists, tuples, and much more.)
