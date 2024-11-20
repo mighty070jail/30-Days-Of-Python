@@ -9,3 +9,7 @@ fav_color = "Blue" #variable to store color.
 
 print(f"\nHello my name is {name}, I am {age} Years old and My favorite Color is {fav_color} .")
 #Above Line Prints variables within a string..
+'''
+OUTPUT:
+Hello my name is Joshil S Abraham, I am 18 Years old and My favorite Color is Blue .
+'''
