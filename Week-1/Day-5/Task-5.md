@@ -4,9 +4,10 @@ It’s common for code to use multiple variables, especially when calculating co
 
 ---
 
-## Task: Calculate the Number of Seconds in Four Years
+### **Task-1**: Calculate the Number of Seconds in 1 Year
+#### **Task-2**: Compute the Number of Seconds in 4 Years
 
-We need to calculate the total number of seconds in **four years** using the following variables:
+We need to calculate the total number of seconds using the following variables:
 
 ```python
 num_years = 4
@@ -16,8 +17,6 @@ mins_per_hour = 60
 secs_per_min = 60
 ```
 
-#### **Task-1**: Calculate the Number of Seconds in 1 Year
-#### **Task-2**: Compute the Number of Seconds in 4 Years
 
 Write a Python script to perform the above calculations and verify the result 
 1)**31,536,000 seconds**.
