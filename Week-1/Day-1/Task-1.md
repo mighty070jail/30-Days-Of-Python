@@ -1,4 +1,4 @@
-### Day 1: Introduction to `print()`
+# Day 1: Introduction to `print()`
 
 **Objective**: To introduce beginners to the basic concept of outputting text to the screen using Python’s `print()` function. This will help them become comfortable with seeing their code produce visible results.
 
