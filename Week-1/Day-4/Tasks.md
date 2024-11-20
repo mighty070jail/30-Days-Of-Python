@@ -31,9 +31,7 @@
 ## **Optional: Exploring Errors**
 1. Try to create a variable with a name starting with a number (e.g., `1var = 5`) and observe what happens.  
 2. Create a variable `my-var` with a hyphen and note the result.  
-3. Fix the errors by using valid variable names.  
-  
-
+3. Fix the errors by using valid variable names.
 ---
 
 ### **Goal**  
