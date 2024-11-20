@@ -1,4 +1,4 @@
-# Using Multiple Variables
+# Day-5: Using Multiple Variables
 
 It’s common for code to use multiple variables, especially when calculating complex problems with various inputs. Using variables improves code readability and makes it easier to verify and update calculations.
 
