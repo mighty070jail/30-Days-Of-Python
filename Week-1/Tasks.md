@@ -88,14 +88,15 @@ secs_per_min = 60
 1. Create boolean variables using expressions (`5 > 3`, `10 == 15`, etc.).
 2. Use the `not` operator to invert a boolean's value.
 3. Print the results and their types.
-   
-```
+---
 
-## Part 4: **Explore Floats**
+
+###Part 4: **Explore Floats**
 1. Create a float variable with a fractional value.
 2. Use the `round()` function to round it to 2 decimal places.
 3. Print the original and rounded values.
 ---
+ 
 
 ### **Day 5: Introduction to Data Types**
 - **Task**: 
