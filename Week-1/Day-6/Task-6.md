@@ -1,6 +1,6 @@
 # Day-6: Explore and Practice Python Data Types
 
-## Part 1: **Create Variables with Different Data Types**
+### Part 1: **Create Variables with Different Data Types**
 1. Define variables with the following data types: integer, float, boolean, and string.
 2. Print each variable along with its type using the `type()` function.
 
@@ -21,7 +21,7 @@ print(my_string, type(my_string))
 
 ---
 
-## Part 2: **Perform Operations with Strings**
+### Part 2: **Perform Operations with Strings**
 1. Concatenate two strings and print the result.
 2. Multiply a string by an integer and print the repeated string.
 3. Use the `len()` function to find the length of a string.
@@ -43,7 +43,7 @@ print("Length of the string:", length)
 
 ---
 
-## Part 3: **Work with Booleans**
+### Part 3: **Work with Booleans**
 1. Create boolean variables using expressions (`5 > 3`, `10 == 15`, etc.).
 2. Use the `not` operator to invert a boolean's value.
 3. Print the results and their types.
@@ -64,7 +64,7 @@ print(inverted, type(inverted))  # False
 
 ---
 
-#### Part 4: **Explore Floats**
+### Part 4: **Explore Floats**
 1. Create a float variable with a fractional value.
 2. Use the `round()` function to round it to 2 decimal places.
 3. Print the original and rounded values.
