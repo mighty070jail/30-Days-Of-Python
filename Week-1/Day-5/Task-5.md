@@ -16,12 +16,7 @@ hours_per_day = 24
 mins_per_hour = 60
 secs_per_min = 60
 ```
-
-
-Write a Python script to perform the above calculations and verify the result 
-1)**31,536,000 seconds**.
-2)**126,144,000 seconds**
----
+Write a Python script to perform the above calculations and verify the result: 1)31,536,000 seconds. 2)126,144,000 seconds
 
 ### Why Use Variables?
 
