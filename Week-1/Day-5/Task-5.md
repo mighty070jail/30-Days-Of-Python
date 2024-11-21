@@ -4,7 +4,7 @@ It’s common for code to use multiple variables, especially when calculating co
 
 ---
 
-### **Task-1**: Calculate the Number of Seconds in 1 Year
+#### **Task-1**: Calculate the Number of Seconds in 1 Year
 #### **Task-2**: Compute the Number of Seconds in 4 Years
 
 We need to calculate the total number of seconds using the following variables:
