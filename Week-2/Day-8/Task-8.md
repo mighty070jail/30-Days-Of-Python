@@ -37,7 +37,7 @@ Note that Python uses zero-based indexing, which means that:
 - to pull the second entry in the list, you use 1, and
 - to pull the final entry in the list, you use one less than the length of the list.
 
-**Side Note**: We can use a single `print()` to print multiple items (both a Python string (like `"First entry:"`) and a value from the list (like `flowers_list[0]`).  To print multiple things in Python with a single command, we need only separate them with a comma.
+We can use a single `print()` to print multiple items (both a Python string (like `"First entry:"`) and a value from the list (like `flowers_list[0]`).  To print multiple things in Python with a single command, we need only separate them with a comma.
 
 ## Slicing
 You can also pull a segment of a list (for instance, the first three entries or the last two entries).  This is called **slicing**.  For instance:
