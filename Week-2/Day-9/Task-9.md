@@ -1,4 +1,4 @@
-# Day-8: Lists of Integers
+# Day-9: Lists of Integers
 
 So far, we have only worked with lists where each item in the list is a string.  But lists can have items with any data type, including booleans, integers, and floats.
 
