@@ -1,5 +1,5 @@
 # Week-2: Exploring Control Structures and Simple Functions
-This week, we’ll focus on Lists and Tuples to build foundational programming skills.
+This week, we’ll focus on Lists in python to get comfortable with lists.
 
 ## **Day-8: Introduction to Lists**
   - **Tasks**:
