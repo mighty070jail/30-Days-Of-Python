@@ -9,7 +9,7 @@ hardcover_sales = [139, 128, 172, 139, 191, 168, 170]
 ```
 Here, `hardcover_sales` is a list of integers.  
 
-### Part 1: **List Operations**
+### Task: **List Operations**
 - Similar to when working with strings, you can still do things like get the length, print individual entries, and extend the list.
 - Also get the minimum with `min()` and the maximum with `max()`.
 - Add every item in the list, use `sum()`.
