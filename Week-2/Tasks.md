@@ -1,4 +1,4 @@
-# Week-2: Exploring Control Structures and Simple Functions
+# Week-2: Lists in Python
 This week, we’ll focus on Lists in python to get comfortable with lists.
 
 ## **Day-8: Introduction to Lists**
