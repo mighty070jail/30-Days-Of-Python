@@ -14,7 +14,15 @@ This week, we’ll focus on Lists in python to get comfortable with lists.
      - Summarize the key points of working with lists in Python.
      - Highlight the main concepts like list creation, indexing, slicing, and modifying lists with `.append()` and `.remove()`.
 
-    
+---
+
+## **Day-9: Lists of Integers**
+  -**Task-9**: List Operations
+      Here, given `hardcover_sales` is a list of integers.  
+    - Print the length, print individual entries, and extend the list.
+    - Get the minimum with `min()` and the maximum with `max()`.
+    - Add every item in the list using `sum()` function
+    - Take the sum from the first five days, and then divide by five to get the average number of books sold in the first five days.
 
 - **Day 9**: Practice looping by printing numbers from 1 to 5 using a `for` loop.
 - **Day 10**: Use a `while` loop to print a message multiple times, exploring how loops can repeat actions.
