@@ -24,7 +24,6 @@ This week, we’ll focus on Lists in python to get comfortable with lists.
     - Add every item in the list using `sum()` function
     - Take the sum from the first five days, and then divide by five to get the average number of books sold in the first five days.
 
-- **Day 9**: Practice looping by printing numbers from 1 to 5 using a `for` loop.
 - **Day 10**: Use a `while` loop to print a message multiple times, exploring how loops can repeat actions.
 - **Day 11**: Create a basic function (`say_hello()`) that prints a greeting when called, introducing the concept of functions.
 - **Day 12**: Write a function to add two numbers, demonstrating how functions can accept input and return a result.
