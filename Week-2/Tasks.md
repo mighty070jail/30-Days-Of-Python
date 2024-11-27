@@ -17,8 +17,8 @@ This week, we’ll focus on Lists in python to get comfortable with lists.
 ---
 
 ## **Day-9: Lists of Integers**
-  -**Task-9**: List Operations
-      Here, given `hardcover_sales` is a list of integers.  
+  - **Task-9: List Operations**
+    - Here, given `hardcover_sales` is a list of integers.  
     - Print the length, print individual entries, and extend the list.
     - Get the minimum with `min()` and the maximum with `max()`.
     - Add every item in the list using `sum()` function
