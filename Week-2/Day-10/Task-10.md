@@ -1,4 +1,4 @@
-# Day 10 Task: Predicting List Lengths
+# Day-10: Predicting List Lengths
 
 ```python
 a = [1, 2, 3]
@@ -12,11 +12,11 @@ d = [1, 2, 3][1:]
 lengths = []
 ```
 
-#### **Task:**
+### **Task:**
 1. Predict the lengths of the lists `a`, `b`, `c`, and `d` without using the `len()` function.
 2. Write your predictions in the `lengths` list.
 
-#### **Challenge:**
+### **Challenge:**
 After making your predictions, verify them by calling `len()` on each list and check if your predictions are correct.
 
 ```python
